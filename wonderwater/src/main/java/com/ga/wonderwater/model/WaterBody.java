@@ -8,8 +8,6 @@ import javax.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
 @Entity
 @Table(name = "WaterBody")
 public class WaterBody {
@@ -37,7 +35,6 @@ public class WaterBody {
 	@Column(columnDefinition = "text")
 	private String descripetion;
 	
-	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "FK_userId")
 	private User user;

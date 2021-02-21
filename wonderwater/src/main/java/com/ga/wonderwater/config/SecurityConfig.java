@@ -40,9 +40,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.csrf().disable()
 			.authorizeRequests()
-			.antMatchers("/waterbody/add", "/comment/add").hasAnyRole("ADMIN","USER")
-			.antMatchers("/waterbody/edit", "/comment/edit").hasAnyRole("ADMIN","USER")
-			.antMatchers("/waterbody/delete", "/comment/delete").hasAnyRole("ADMIN","USER")
+			.antMatchers("/waterbody/add", "/comment/add", "/bookmark/add").hasAnyRole("ADMIN","USER")
+			.antMatchers("/waterbody/edit").hasRole("USER")
+			.antMatchers("/waterbody/delete", "/comment/delete", "/bookmark/delete").hasAnyRole("ADMIN","USER")
 			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		
 		http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

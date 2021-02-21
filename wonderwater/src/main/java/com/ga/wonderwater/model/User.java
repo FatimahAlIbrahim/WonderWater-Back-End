@@ -1,7 +1,6 @@
 package com.ga.wonderwater.model;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 import javax.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -27,15 +26,6 @@ public class User {
 	private String password;
 	
 	private String userRole;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private Set<WaterBody> waterBodies;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private Set<Comment> comments;
-	
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-	private Set<Bookmark> bookmarks;
 	
 	@Column(name="createdAt", nullable = false, updatable = false)
 	@CreationTimestamp
@@ -99,30 +89,6 @@ public class User {
 
 	public void setUserRole(String userRole) {
 		this.userRole = userRole;
-	}
-	
-	public Set<WaterBody> getWaterBodies() {
-		return waterBodies;
-	}
-
-	public void setWaterBodies(Set<WaterBody> waterBodies) {
-		this.waterBodies = waterBodies;
-	}
-
-	public Set<Comment> getComments() {
-		return comments;
-	}
-
-	public void setComments(Set<Comment> comments) {
-		this.comments = comments;
-	}
-
-	public Set<Bookmark> getBookmarks() {
-		return bookmarks;
-	}
-
-	public void setBookmarks(Set<Bookmark> bookmarks) {
-		this.bookmarks = bookmarks;
 	}
 
 	public LocalDateTime getCreateAt() {

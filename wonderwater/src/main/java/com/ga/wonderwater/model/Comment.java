@@ -19,9 +19,6 @@ public class Comment {
 	@Column(columnDefinition = "text")
 	private String commentBody;
 	
-	private String userName;
-	
-	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "FK_userId")
 	private User user;
@@ -49,14 +46,6 @@ public class Comment {
 
 	public void setCommentBody(String commentBody) {
 		this.commentBody = commentBody;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
 	}
 
 	public User getUser() {

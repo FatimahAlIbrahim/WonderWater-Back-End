@@ -16,7 +16,6 @@ public class Bookmark {
 	@GeneratedValue
 	private int bookmarkId;
 	
-	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "FK_userId")
 	private User user;
