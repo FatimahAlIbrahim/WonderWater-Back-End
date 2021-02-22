@@ -33,7 +33,7 @@ public class WaterBody {
 	private boolean allowSwimming;
 	
 	@Column(columnDefinition = "text")
-	private String descripetion;
+	private String description;
 	
 	@ManyToOne
 	@JoinColumn(name = "FK_userId")
@@ -117,12 +117,12 @@ public class WaterBody {
 		this.allowSwimming = allowSwimming;
 	}
 
-	public String getDescripetion() {
-		return descripetion;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescripetion(String descripetion) {
-		this.descripetion = descripetion;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public User getUser() {

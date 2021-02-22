@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.csrf().disable()
 			.authorizeRequests()
 			.antMatchers("/waterbody/add", "/comment/add", "/bookmark/add").hasAnyRole("ADMIN","USER")
-			.antMatchers("/waterbody/edit").hasRole("USER")
+			.antMatchers("/waterbody/edit").hasAnyRole("ADMIN","USER")
 			.antMatchers("/waterbody/delete", "/comment/delete", "/bookmark/delete").hasAnyRole("ADMIN","USER")
 			.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		

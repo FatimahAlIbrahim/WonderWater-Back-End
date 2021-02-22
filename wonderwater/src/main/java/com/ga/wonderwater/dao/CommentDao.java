@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.ga.wonderwater.model.Comment;
 
 public interface CommentDao extends CrudRepository<Comment, Integer>{
-
+	public Comment findById(int id);
 }
