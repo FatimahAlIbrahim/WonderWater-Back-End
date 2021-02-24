@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ga.wonderwater.dao.WaterBodyDao;
+import com.ga.wonderwater.model.User;
 import com.ga.wonderwater.model.WaterBody;
 
 @RestController
@@ -46,6 +47,12 @@ public class WaterBodyController {
 	public boolean deleteWaterBody(@RequestParam int id) {
 		waterBodyDao.deleteById(id);
 		return true;
+	}
+	
+	@GetMapping("/waterbody/find")
+	public Iterable<WaterBody> userWaterBodies(@RequestParam int id){
+		var it = waterBodyDao.findAllByUserId(id);
+		return it;
 	}
 	
 }

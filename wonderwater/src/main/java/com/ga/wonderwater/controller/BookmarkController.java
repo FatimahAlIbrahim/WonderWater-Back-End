@@ -18,9 +18,9 @@ public class BookmarkController {
 	@Autowired
 	BookmarkDao bookmarkDao;
 	
-	@GetMapping("/bookmark/index")
-	public Iterable<Bookmark> bookmarkDetails(@RequestBody User user) {
-		var it = bookmarkDao.findByUser(user);
+	@GetMapping("/bookmark/find")
+	public Iterable<?> bookmarkDetails(@RequestParam int id) {
+		var it = bookmarkDao.findAllByUser(id);
 		return it;
 	}
 	
