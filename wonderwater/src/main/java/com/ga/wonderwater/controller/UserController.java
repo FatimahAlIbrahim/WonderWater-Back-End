@@ -1,6 +1,7 @@
 package com.ga.wonderwater.controller;
 
 import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -76,6 +78,22 @@ public class UserController {
 	@GetMapping("/user/userInfo")
 	public User userInfo(@RequestParam String email) {
 		User user = userDao.findByEmailAddress(email);
+		return user;
+	}
+	
+	@PostMapping("/user/checkPassword")
+	public boolean checkPassword(@RequestBody HashMap<String, String> userInfo) {
+		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
+		User user = userDao.findById(Integer.parseInt(userInfo.get("id")));
+		return bCrypt.matches(userInfo.get("password"), user.getPassword());
+	}
+	
+	@PutMapping("/user/edit")
+	public User editUser(@RequestBody User user) {
+		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
+		String newPassword = bCrypt.encode(user.getPassword());
+		user.setPassword(newPassword);
+		userDao.save(user);
 		return user;
 	}
 
