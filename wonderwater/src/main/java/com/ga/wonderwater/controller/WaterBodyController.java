@@ -1,6 +1,7 @@
 package com.ga.wonderwater.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ga.wonderwater.dao.WaterBodyDao;
-import com.ga.wonderwater.model.User;
 import com.ga.wonderwater.model.WaterBody;
 
+//@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
 @RestController
 public class WaterBodyController {
 	
