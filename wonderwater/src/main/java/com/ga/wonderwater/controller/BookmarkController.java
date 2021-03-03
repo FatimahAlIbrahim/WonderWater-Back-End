@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ga.wonderwater.dao.BookmarkDao;
 import com.ga.wonderwater.model.Bookmark;
 
-//@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
+@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
 @RestController
 public class BookmarkController {
 	

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ga.wonderwater.dao.WaterBodyDao;
 import com.ga.wonderwater.model.WaterBody;
 
-//@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
+@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
 @RestController
 public class WaterBodyController {
 	

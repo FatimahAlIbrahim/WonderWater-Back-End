@@ -22,7 +22,7 @@ import com.ga.wonderwater.dao.UserDao;
 import com.ga.wonderwater.model.JwtResponse;
 import com.ga.wonderwater.model.User;
 
-//@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
+@CrossOrigin(origins = "https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/")
 @RestController
 public class UserController {
 
