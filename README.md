@@ -1,11 +1,11 @@
 # WonderWater-Back-End
 The Back end side of Wonder Water, a website that allows users to share and view strange and wonderful water bodies from all around the world. 
 
+Developed for Project 1 in Java Developer immersive course by GA and Misk Academy
+
 ## Important Links
 
-- [Front End Side Repo](https://git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End)
-- [Deployed API](http://wonderwater-env.eba-xrp2ugc4.us-east-2.elasticbeanstalk.com/)
-- [Deployed Client](https://pages.git.generalassemb.ly/fatimah-al-ibrahim/WonderWater-Front-End/)
+- [Front End Side Repo](https://github.com/FatimahAlIbrahim/WonderWater-Front-End)
 
 ## Planning Story
 
