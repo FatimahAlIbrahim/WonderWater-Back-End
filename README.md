@@ -1,7 +1,7 @@
 # WonderWater-Back-End
 The Back end side of Wonder Water, a website that allows users to share and view strange and wonderful water bodies from all around the world. 
 
-Developed for Project 1 in Java Developer immersive course by GA and Misk Academy
+Developed for Project 3 in Java Developer immersive course by GA and Misk Academy
 
 ## Important Links
 
